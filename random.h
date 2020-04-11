@@ -7,7 +7,7 @@ void rand_int(int array[]){
     srand((unsigned)time(NULL));
 
     for(int i = 0; i < size_array; ++i)
-        array[i] = rand()%last + first;
+        array[i] = rand()%(last+1) + first;
 }
 
 #endif //random_H
