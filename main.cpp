@@ -1,15 +1,19 @@
 #include"header.h"
 #include"random.h"
+#include"counting_sort.h"
 
 using namespace std;
 
 int main() {
-    int arr[10];
-    int size = sizeof(arr)/sizeof(arr[0]);
-    rand_int(0, 15, size, arr);
+    int arr[size_array];
+    rand_int(arr);
 
-    for(auto const& i : arr)
-        cout << i << endl;
+    cout << "Original:  ";
+    for(const auto& i : arr)
+        cout << i << " ";
+
+    cout << endl;
+    count_sort(arr);  
 
     return 0;
 }
